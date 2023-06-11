@@ -1,13 +1,18 @@
 const mysql = require('mysql');
 const express = require('express');
 const path = require('path');
-const router = require('./src/routers/web.routers')
+const router = require('./src/routers/web.routers');
+const fileUpload = require('express-fileupload');
+
 
 const app = express();
 const PORT = 3333;
 
 app.use(router)
-
+app.use(fileUpload({
+    createParentPath: true
+}));
+app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.set('views',path.join(__dirname,'src/template'));
 

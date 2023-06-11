@@ -6,7 +6,8 @@ id int primary key auto_increment,
 name varchar(50),
 city varchar(50),
 exp int,
-salary int
+salary int,
+avatar varchar(200)
 
 );
 

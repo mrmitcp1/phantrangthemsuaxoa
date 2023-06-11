@@ -4,7 +4,14 @@ class StaffController {
     static async insertStaff(req, res) {
         try {
             const {name, city, exp, salary} = req.body;
-            await StaffModel.insertStaff(name, city, exp, salary);
+            let avatarUrl = '/public/avatar.jpg'
+            if (req.files){
+                let avatar = req.files.avatar;
+                avatar.mv('./public/img/' + avatar.name);
+                avatarUrl = '/img/' + avatar.name;
+            }
+            console.log(req.files)
+            await StaffModel.insertStaff(name, city, exp, salary, avatarUrl);
             res.redirect('/staffs')
         } catch (err) {
             console.log(err.message)
@@ -38,7 +45,16 @@ class StaffController {
       try {
           let id=req.params.id;
           const {name,city,exp,salary}=req.body;
-          await StaffModel.updateStaff(name,city,exp,salary,id)
+          let avatarUrl;
+          if (req.files) {
+              let avatar = req.files.avatar;
+              avatar.mv('./public/img/' + avatar.name);
+              avatarUrl = '/img/' + avatar.name;
+          } else {
+              let image = await StaffModel.getAvatarStaff(+id);
+              avatarUrl = image[0].avatar;
+          }
+          await StaffModel.updateStaff(name,city,+exp,+salary,avatarUrl,+id)
           res.redirect('/staffs')
       }
         catch (e){
