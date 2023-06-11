@@ -7,7 +7,7 @@
     <list default="true" id="b3f29870-0fa3-4258-a612-995d05b51774" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/staff.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/staff.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routers/web.routers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routers/web.routers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/index.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1686296822398</updated>
       <workItem from="1686296824523" duration="6983000" />
-      <workItem from="1686447054440" duration="7633000" />
+      <workItem from="1686447054440" duration="9562000" />
     </task>
     <servers />
   </component>

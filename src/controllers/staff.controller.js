@@ -47,21 +47,14 @@ class StaffController {
     }
     static async getPage(req,res){
         try {
-            let listStaffs = await StaffModel.showListStaffs()
-            let page = req.query.page ? +req.query.page : 1;
-            let limit = req.query.limit
-            let result = await StaffModel.getStaffQuantity()
-            let staffs = result[0];
-            console.log(staffs)
             let size = 2;
-            let pages = Math.ceil(staffs.length / size);
-            console.log(pages)
-            if (limit && page){
-                let offset = (page - 1)* size +1;
-                let result = await StaffModel.getStaffPaginate(offset,size)
-                staffs = result[0]
-            }
-            res.render('index',{data: staffs,totalPage:pages,size:size,staffs:listStaffs})
+            let page = req.query.page ? +req.query.page : 1;
+            let result = await StaffModel.getStaffQuantity()
+            let staffs = result[0].totalStaff;
+            let pages = Math.ceil(staffs / size);
+                let offset = (page - 1)* size;
+                let dataPage = await StaffModel.getStaffPaginate(offset,size)
+            res.render('index',{staffs: dataPage,totalPage:pages,size:size})
         }
         catch (e){
             console.log(e.message)
