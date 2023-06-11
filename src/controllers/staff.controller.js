@@ -14,16 +14,6 @@ class StaffController {
     static async getInsertStaff(req, res) {
         await res.render('create')
     }
-
-    static async showStaff(req, res) {
-        try {
-
-            let listStaffs = await StaffModel.showListStaffs()
-            res.render('index', {staffs: listStaffs})
-        } catch (err) {
-            console.log(err.message)
-        }
-    }
     static async deleteStaff(req, res){
         try {
             let id = req.params.id;
@@ -56,9 +46,10 @@ class StaffController {
         }
     }
     static async getPage(req,res){
-        console.log(123)
         try {
-            let {page, limit}=req.query;
+            let listStaffs = await StaffModel.showListStaffs()
+            let page = req.query.page ? +req.query.page : 1;
+            let limit = req.query.limit
             let result = await StaffModel.getStaffQuantity()
             let staffs = result[0];
             console.log(staffs)
@@ -70,7 +61,7 @@ class StaffController {
                 let result = await StaffModel.getStaffPaginate(offset,size)
                 staffs = result[0]
             }
-            res.render('index',{data: staffs,totalPage:pages,size:size})
+            res.render('index',{data: staffs,totalPage:pages,size:size,staffs:listStaffs})
         }
         catch (e){
             console.log(e.message)

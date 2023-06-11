@@ -6,7 +6,6 @@ const urlencoded= bodyParser.urlencoded({extended:false})
 
 router.get('/staffs/create',StaffController.getInsertStaff);
 router.post('/staffs/create',urlencoded,StaffController.insertStaff);
-router.get('/staffs', StaffController.showStaff);
 router.get('/staffs/:id/delete',StaffController.deleteStaff);
 router.get('/staffs/:id/update',StaffController.takeUpdate);
 router.post('/staffs/:id/update',urlencoded,StaffController.updateStaff);
