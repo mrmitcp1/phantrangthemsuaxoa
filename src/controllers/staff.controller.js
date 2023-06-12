@@ -3,14 +3,15 @@ const StaffModel = require('../models/staff.model');
 class StaffController {
     static async insertStaff(req, res) {
         try {
+            let avatarUrl = '/upload/avatar.jpg'
             const {name, city, exp, salary} = req.body;
-            let avatarUrl = '/public/avatar.jpg'
+
             if (req.files){
                 let avatar = req.files.avatar;
-                avatar.mv('./public/img/' + avatar.name);
-                avatarUrl = '/img/' + avatar.name;
+
+                avatar.mv('./public/upload/' + avatar.name);
+                avatarUrl = '/upload/' + avatar.name;
             }
-            console.log(req.files)
             await StaffModel.insertStaff(name, city, exp, salary, avatarUrl);
             res.redirect('/staffs')
         } catch (err) {
@@ -48,8 +49,8 @@ class StaffController {
           let avatarUrl;
           if (req.files) {
               let avatar = req.files.avatar;
-              avatar.mv('./public/img/' + avatar.name);
-              avatarUrl = '/img/' + avatar.name;
+              avatar.mv('./public/upload/' + avatar.name);
+              avatarUrl = '/upload/' + avatar.name;
           } else {
               let image = await StaffModel.getAvatarStaff(+id);
               avatarUrl = image[0].avatar;

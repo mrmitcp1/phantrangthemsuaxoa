@@ -1,10 +1,11 @@
 const BaseModel = require ('./base.model')
 class StaffModel{
 
-    async insertStaff(name,city,exp,salary){
+    async insertStaff(name,city,exp,salary,avatar){
        try{
            const sql = `INSERT INTO staffs (name,city,exp,salary,avatar)
                      VALUES ('${name}', '${city}', ${exp}, ${salary},'${avatar}')`
+
            return await BaseModel.querySQL(sql)
        }catch (e){
            console.log(e.message)

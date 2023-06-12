@@ -7,16 +7,12 @@
     <list default="true" id="b3f29870-0fa3-4258-a612-995d05b51774" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/avatar.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/avatar.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/staff.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/staff.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/base.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/base.model.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/staff.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/staff.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/template/a.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/a.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/template/create.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/create.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/template/update.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/update.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routers/web.routers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routers/web.routers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/index.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +65,8 @@
       <option name="presentableId" value="Default" />
       <updated>1686296822398</updated>
       <workItem from="1686296824523" duration="6983000" />
-      <workItem from="1686447054440" duration="13880000" />
+      <workItem from="1686447054440" duration="16376000" />
+      <workItem from="1686538953571" duration="660000" />
     </task>
     <servers />
   </component>

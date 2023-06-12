@@ -8,7 +8,6 @@ city varchar(50),
 exp int,
 salary int,
 avatar varchar(200)
-
 );
 
 UPDATE staffs SET name = 'Viet', city ='HN', exp = 123123, salary = 123123 WHERE id = 2;
